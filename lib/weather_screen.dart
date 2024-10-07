@@ -97,11 +97,14 @@ class _WeatherScreenState extends State<WeatherScreen> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: const [
-                  HourlyForecast(),
-                  HourlyForecast(),
-                  HourlyForecast(),
-                  HourlyForecast(),
-                  HourlyForecast(),
+                  HourlyForecast(
+                      time: '09:00', icon: Icons.cloud, temp: '301.1'),
+                  HourlyForecast(
+                      time: '12:00', icon: Icons.cloud, temp: '201.1'),
+                  HourlyForecast(
+                      time: '14:00', icon: Icons.cloud, temp: '101.1'),
+                  HourlyForecast(
+                      time: '16:00', icon: Icons.cloud, temp: '91.1'),
                 ],
               ),
             ),
@@ -126,15 +129,15 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 AdditionalInfoItem(
                     icon: Icons.water_drop,
                     condition: 'Humidity',
-                    temperature: '9.4'),
+                    temperature: '91'),
                 AdditionalInfoItem(
-                    icon: Icons.water_drop,
-                    condition: 'Humidity',
-                    temperature: '9.4'),
+                    icon: Icons.air,
+                    condition: 'Wind Speed',
+                    temperature: '7.5'),
                 AdditionalInfoItem(
-                    icon: Icons.water_drop,
-                    condition: 'Humidity',
-                    temperature: '9.4')
+                    icon: Icons.beach_access,
+                    condition: 'Pressure',
+                    temperature: '1000')
               ],
             )
           ],
